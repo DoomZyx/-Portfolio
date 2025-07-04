@@ -4,94 +4,87 @@
   margin: 2em;
 }
 
-.layoutgrid {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: auto auto auto;
-  grid-template-areas:
-    "kasa      leMas      Iphone3d"
-    "space     stack      Iphone3d"
-    "ohmyfood  myself     myself";
-  gap: 20px;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 2em;
-  justify-items: center;
-  align-items: start;
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-inline: 10em;
+  margin-top: 10em;
 }
 
-.kasa {
-  grid-area: kasa;
-  border: 1px solid #484646;
-  border-radius: 15px;
-  max-width: 320px;
-  width: 100%;
-  height: 100%;
-  min-height: 350px;
 
-  img {
-    border-radius: 15px;
-    margin: 0.5em;
-    width: 300px;
-    height: 200px;
-  }
+.containerThirst {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  align-items: flex-start;
 }
 
+.kasa,
 .leMas {
-  grid-area: leMas;
   border: 1px solid #484646;
   border-radius: 15px;
-  max-width: 320px;
+  max-width: 400px;
   width: 100%;
-  height: 280px;
+  min-height: 200px; /* hauteur minimum */
+  height: auto; 
 
   img {
-    margin: 0.5em;
+    padding: 0.5em;
     border-radius: 15px;
-    width: 300px;
-    height: 200px;
+    width: 95%;
+    height: auto; 
   }
 }
 
 .Iphone3d {
-  border: 2px solid #484646;
-  grid-area: Iphone3d;
+  border: 1px solid #484646;
   border-radius: 20px;
+  min-width: 700px;
   width: 100%;
-  max-width: 500px;
-  grid-column: 3;
-  grid-row: 1; // juste sur la ligne 1
+  min-height: 500px;
   height: auto;
-  max-height: 300px;
   justify-self: center;
 }
 
-.space {
-  grid-area: space;
-  max-width: 450px;
+.secondlayout {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 0 auto;
   width: 100%;
-  padding: 1em;
+}
+.space {
   border: 1px solid #484646;
   border-radius: 20px;
+  max-width: 805px;
+  margin-top: -12em;
+  width: 100%;
+  height: 540px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   img {
     border-radius: 20px;
-    width: 450px;
-    height: 300px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 }
 
 .layout-stack {
-  grid-area: stack;
+  margin-top: 0.3em;
   border: 1px solid #484646;
   border-radius: 15px;
-  max-width: 306px;
+  max-width: 700px;
   width: 100%;
-  height: 200px;
+  height: 343px;
 
   .thirstrangest {
-    width: 306px;
-    height: 100px;
+    width: 700px;
+    height: 172px;
 
     :nth-child(1) {
       border-top-left-radius: 15px;
@@ -102,8 +95,8 @@
   }
 
   .secondrangest {
-    width: 306px;
-    height: 100px;
+    width: 700px;
+    height: 343px;
 
     :nth-child(1) {
       border-bottom-left-radius: 15px;
@@ -115,34 +108,43 @@
 
   img {
     border: 1px solid #484646;
-    width: 100px;
-    height: 100px;
+    width: 231.3px;
+    height: 170px;
+    object-fit: contain;
   }
 }
 
+
 .ohmyfood {
-  grid-area: ohmyfood;
   border: 1px solid #484646;
   border-radius: 15px;
-  max-width: 320px;
+  max-width: 805px;
   width: 100%;
-  height: 280px;
+  height: auto;
 
   img {
     margin: 0.5em;
     border-radius: 15px;
-    width: 300px;
-    height: 200px;
+    width: 98%;
+    height: auto;
+    object-fit: cover;
   }
 }
 
 .myself {
-  grid-area: myself;
-  justify-self: center;
+  border: 1px solid #484646;
+  border-radius: 15px;
+  width: 700px;
+  text-align: center;
 }
 
 .info-project {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   align-items: center;
+  padding-inline: 1em;
+  svg {
+    font-size: 1.3em;
+  }
 }
