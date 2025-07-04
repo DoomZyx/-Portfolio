@@ -1,0 +1,24 @@
+.layout-catchprase2 {
+ padding: 5rem;
+ display: flex;
+ flex-direction: row;
+ gap: 15px;
+ img {
+  border: 1px solid #464848;
+  border-radius: 25px;
+  width: 600px;
+  height: 400px;
+  object-fit: cover;
+ }
+ h4 {
+  border: 1px solid #464848;
+  border-radius: 25px;
+  font-size: 1.5rem;
+  font-weight: 200;
+  display: flex;
+  align-items: center;
+  height: 305px;
+  margin: 0;
+  padding: 2em;
+ }
+}

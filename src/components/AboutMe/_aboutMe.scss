@@ -1,0 +1,21 @@
+.aboutMeSec {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1;
+  transform: translateY(-110%);
+  margin-bottom: -30em;
+  h2 {
+    color: #ecbd00;
+    font-size: 1.2em;
+  }
+  h3 {
+    font-size: 2em;
+  }
+  h4 {
+    width: 30%;
+    font-weight: 300;
+    font-size: 1.2em;
+  }
+}

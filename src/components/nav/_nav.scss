@@ -1,0 +1,58 @@
+nav {
+  margin: 1em;
+  width: 50%;
+  height: 50px;
+  border: 1px solid #d6d6d6d6;
+  border-radius: 50px;
+  transform: translateX(50%);
+}
+
+.nav-layout,
+.myProfile,
+.links,
+.connectButton {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-layout {
+  height: 50px;
+}
+
+.myProfile {
+  gap: 10px;
+  margin-left: 0.5em;
+  .pictureOfMyself {
+    width: 35px;
+    height: 35px;
+    border-radius: 50px;
+  }
+  h4 {
+    font-weight: 800;
+    font-size: 1em;
+  }
+}
+
+.links {
+  margin-left: 8em;
+  gap: 45px;
+  font-size: 1em;
+  h4 {
+    font-weight: 300;
+  }
+}
+
+.connectButton {
+  margin-right: 1em;
+  button {
+    outline: 1px solid #8d8888;
+    background: none;
+    color: #ffffff;
+    padding: 0.5em;
+    border-radius: 50px;
+    font-weight: 800;
+    font-size: 0.9em;
+  }
+}
