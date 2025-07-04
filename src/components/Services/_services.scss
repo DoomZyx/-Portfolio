@@ -1,0 +1,39 @@
+.title-services {
+  color: #ecbd00;
+  text-align: center;
+  margin-top: 8em;
+  margin-bottom: 5em;
+}
+
+.box-services {
+  transform: translateX(20%);
+  width: 70%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  border: 1px solid #484646;
+  border-radius: 15px;
+  padding: 1em;
+}
+
+.layout-services {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 25px;
+  .services {
+    h4 {
+      color: #ffffff;
+      font-weight: 300;
+      font-size: 0.8em;
+    }
+    width: 250px;
+    background-color: #000000;
+    border: 1px solid #484646;
+    border-radius: 25px;
+    padding-inline: 1em;
+  }
+  .services:hover {
+      filter: invert(1);
+    }
+}

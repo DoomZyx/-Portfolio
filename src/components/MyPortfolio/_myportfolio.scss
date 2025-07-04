@@ -38,9 +38,12 @@
 }
 
 .Iphone3d {
+  .iphone {
+    height: 500px !important;
+  }
   border: 1px solid #484646;
   border-radius: 20px;
-  min-width: 700px;
+  min-width: 650px;
   width: 100%;
   min-height: 500px;
   height: auto;
@@ -78,12 +81,12 @@
   margin-top: 0.3em;
   border: 1px solid #484646;
   border-radius: 15px;
-  max-width: 700px;
+  max-width: 766px;
   width: 100%;
   height: 343px;
 
   .thirstrangest {
-    width: 700px;
+    width: 766px;
     height: 172px;
 
     :nth-child(1) {
@@ -95,7 +98,7 @@
   }
 
   .secondrangest {
-    width: 700px;
+    width: 766px;
     height: 343px;
 
     :nth-child(1) {
@@ -108,7 +111,7 @@
 
   img {
     border: 1px solid #484646;
-    width: 231.3px;
+    width: 253.3px;
     height: 170px;
     object-fit: contain;
   }
@@ -134,7 +137,7 @@
 .myself {
   border: 1px solid #484646;
   border-radius: 15px;
-  width: 700px;
+  width: 766px;
   text-align: center;
 }
 
