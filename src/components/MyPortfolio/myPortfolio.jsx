@@ -1,4 +1,6 @@
 import { useRef, useEffect } from "react";
+import { HashLink as Link } from "react-router-hash-link";
+import projects from "../../data/projects";
 import "./_myportfolio.scss";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -6,8 +8,8 @@ import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
 import Spline from "@splinetool/react-spline";
 
-import kasa from "/public/kasa.png";
-import LeMas from "/public/LeMasDuParadis1.png";
+import kasaimg from "/public/kasa.png";
+import LeMasimg from "/public/LeMasDuParadis1.png";
 import space from "/public/space.jpg";
 
 import node from "/public/stack/node.png";
@@ -17,7 +19,7 @@ import react from "/public/stack/react.png";
 import sass from "/public/stack/sass.png";
 import figma from "/public/stack/figma.png";
 
-import ohmyfood from "/public/ohmyfood1.png";
+import ohmyfoodimg from "/public/ohmyfood1.png";
 
 import character from "/public/character.png";
 
@@ -38,25 +40,33 @@ function MyPortfolio() {
     };
   }, []);
 
+  const ohmyfood = projects.find((p) => p.title.fr === "Ohmyfood");
+  const kasa = projects.find((p) => p.title.fr === "Kasa");
+  const leMas = projects.find((p) => p.title.fr === "Le Mas Du Paradis Bleu");
+
   return (
     <>
-      <h2 className="title-portfolio">Mon portfolio</h2>
+      <h2 className="title-portfolio" id="portfolio">Mon portfolio</h2>
 
       <div className="container">
         <div className="containerThirst">
           <div className="kasa">
-            <img src={kasa} alt="" />
+            <img src={kasaimg} alt="" />
             <div className="info-project">
               <h4>Kasa</h4>
-              <FontAwesomeIcon icon={faArrowRight} />
+              <Link smooth={true} to={`/project/${kasa.id}`}>
+                <FontAwesomeIcon icon={faArrowRight} />
+              </Link>
             </div>
           </div>
 
           <div className="leMas">
-            <img src={LeMas} alt="" />
+            <img src={LeMasimg} alt="" />
             <div className="info-project">
               <h4>Le Mas Du Paradis Bleu</h4>
-              <FontAwesomeIcon icon={faArrowRight} />
+              <Link smooth={true} to={`/project/${leMas.id}`}>
+                <FontAwesomeIcon icon={faArrowRight} />
+              </Link>
             </div>
           </div>
 
@@ -87,10 +97,12 @@ function MyPortfolio() {
           </div>
 
           <div className="ohmyfood">
-            <img src={ohmyfood} alt="" />
+            <img src={ohmyfoodimg} alt="" />
             <div className="info-project">
               <h4>Ohmyfood</h4>
-              <FontAwesomeIcon icon={faArrowRight} />
+              <Link smooth={true} to={`/project/${ohmyfood.id}`}>
+                <FontAwesomeIcon icon={faArrowRight} />
+              </Link>
             </div>
           </div>
 

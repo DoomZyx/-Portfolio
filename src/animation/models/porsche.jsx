@@ -31,7 +31,7 @@ function Porsche({ path }) {
 export default function PorscheViewer() {
   return (
     <Canvas
-      style={{ height: "500px", width: "100%" }}
+      style={{ height: "500px", width: "500px" }}
       camera={{ position: [0, 0, 3], fov: 45 }}
     >
       <ambientLight intensity={0.5} />

@@ -4,7 +4,7 @@ import "./_services.scss";
 function MyServices() {
   return (
     <>
-      <h2 className="title-services">Mes services</h2>
+      <h2 className="title-services" id="services">Mes services</h2>
       <div className="box-services">
         <ShapeshifterViewer />
         <div className="layout-services">

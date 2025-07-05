@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@formspree/react": "^3.0.0",
     "@fortawesome/fontawesome-free": "^6.7.2",
     "@fortawesome/free-solid-svg-icons": "^6.7.2",
     "@fortawesome/react-fontawesome": "^0.2.2",
@@ -19,8 +20,11 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^7.6.2",
+    "react-router-hash-link": "^2.4.3",
     "sass": "^1.89.2",
-    "three": "^0.177.0"
+    "swiper": "^11.2.10",
+    "three": "^0.177.0",
+    "yet-another-react-lightbox": "^3.24.0"
   },
   "devDependencies": {
     "@babel/core": "^7.27.4",

@@ -1,0 +1,24 @@
+/* Appliquer sur tout le site */
+html {
+  scrollbar-width: thin; /* Firefox */
+  scrollbar-color: #2b2b2b transparent; /* couleur du thumb + background */
+}
+
+::-webkit-scrollbar {
+  width: 6px; /* largeur verticale */
+}
+
+::-webkit-scrollbar-track {
+  background: transparent; /* couleur du track */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #2b2b2b; /* couleur du thumb */
+  border-radius: 10px;
+  border: 1px solid #000; /* optionnel pour effet “fondu” */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #444; /* couleur au hover */
+}
+

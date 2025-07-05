@@ -1,5 +1,5 @@
 import "./_nav.scss";
-import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 import Me from "/public/me.png";
 
 function Nav() {
@@ -12,22 +12,24 @@ function Nav() {
             <h4>Axel</h4>
           </div>
           <div className="links">
-            <Link to="">
-              <h4>Acceuil</h4>
-            </Link>
-            <Link to="">
-              <h4>Projets</h4>
-            </Link>
-            <Link to="">
-              <h4>Services</h4>
-            </Link>
-            <Link to="">
-              <h4>A propos</h4>
-            </Link>
+            <HashLink smooth={true} to="/">
+            Acceuil
+            </HashLink>
+            <HashLink smooth={true} to="/#portfolio">
+              Portfolio
+            </HashLink>
+            <HashLink smooth={true} to="/#services">
+              Services
+            </HashLink>
+            <HashLink smooth={true} to="/#about">
+              A propos
+            </HashLink>
           </div>
-          <div className="connectButton">
-            <button>Connectons-nous</button>
-          </div>
+          <HashLink smooth={true} to="/#contact">
+            <div className="connectButton">
+              <button>Connectons-nous</button>
+            </div>
+          </HashLink>
         </div>
       </nav>
     </>

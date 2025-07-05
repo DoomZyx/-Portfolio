@@ -1,0 +1,71 @@
+.layout-title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 3em;
+  margin-bottom: 1em;
+  padding: 1em 3em 1em 1em;
+  border-top: 1px solid #484646;
+  border-bottom: 1px solid #484646;
+  svg {
+    font-size: 3em;
+  }
+}
+.project-title {
+  font-size: 2.3em;
+  font-weight: 500;
+}
+
+.project-layout {
+  margin: 0 auto;
+  padding: 2em;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 10px;
+  .description {
+    width: 40%;
+    padding: 1em;
+    border: 1px solid #484646;
+    border-radius: 25px;
+    p {
+      font-size: 1.4em;
+      font-weight: 300;
+    }
+  }
+  .carousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    padding: 2em;
+    border: 1px solid #484646;
+    border-radius: 25px;
+    img {
+      width: 100%;
+      min-width: 450px;
+      height: auto;
+      border-radius: 25px;
+      object-fit: cover;
+    }
+  }
+}
+
+.stacks-layout {
+  margin-top: 2em;
+  margin-bottom: 3em;
+  padding-right: 1em;
+  padding-bottom: 2em;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  gap: 25px;
+  :nth-child(4) {
+    width: 110px;
+  }
+  img {
+    width: 80px;
+    height: 80px;
+  }
+}

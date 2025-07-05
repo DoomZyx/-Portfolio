@@ -2,7 +2,7 @@ nav {
   margin: 1em;
   width: 50%;
   height: 50px;
-  border: 1px solid #d6d6d6d6;
+  border: 1px solid #484646;
   border-radius: 50px;
   transform: translateX(50%);
 }
@@ -39,20 +39,32 @@ nav {
   margin-left: 8em;
   gap: 45px;
   font-size: 1em;
-  h4 {
+  a {
     font-weight: 300;
+  }
+  a:hover {
+    color: #ecbd00;
+    transition: color 0.3s ease;
   }
 }
 
 .connectButton {
-  margin-right: 1em;
+  margin-right: 0.5em;
   button {
-    outline: 1px solid #8d8888;
+    cursor: pointer;
+    border: 1px solid #484646;
     background: none;
     color: #ffffff;
-    padding: 0.5em;
+    padding: 0.7em;
     border-radius: 50px;
-    font-weight: 800;
-    font-size: 0.9em;
+    font-weight: 400;
+    font-size: 0.8em;
+  }
+  button:hover {
+    background: white;
+    color: #000000;
+    border: 1px solid #000000;
+    transition: color 0.3s ease;
+    transition: background 0.3s ease;
   }
 }

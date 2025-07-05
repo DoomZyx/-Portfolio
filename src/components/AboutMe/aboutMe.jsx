@@ -3,7 +3,7 @@ import "./_aboutMe.scss"
 function AboutMe() {
   return (
     <>
-      <div className="aboutMeSec">
+      <div className="aboutMeSec" id="about">
         <h2>A propos de moi</h2>
         <h3>Salut à tous !</h3>
         <h4>
