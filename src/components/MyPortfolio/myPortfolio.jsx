@@ -6,7 +6,6 @@ import "./_myportfolio.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
-import Spline from "@splinetool/react-spline";
 
 import kasaimg from "/public/kasa.png";
 import LeMasimg from "/public/LeMasDuParadis1.png";
@@ -22,6 +21,7 @@ import figma from "/public/stack/figma.png";
 import ohmyfoodimg from "/public/ohmyfood1.png";
 
 import character from "/public/character.png";
+import IphoneViewer from "../../animation/models/iphone";
 
 function MyPortfolio() {
   const containerRef = useRef(null);
@@ -46,7 +46,9 @@ function MyPortfolio() {
 
   return (
     <>
-      <h2 className="title-portfolio" id="portfolio">Mon portfolio</h2>
+      <h2 className="title-portfolio" id="portfolio">
+        Mon portfolio
+      </h2>
 
       <div className="container">
         <div className="containerThirst">
@@ -71,9 +73,7 @@ function MyPortfolio() {
           </div>
 
           <div className="Iphone3d" ref={containerRef}>
-            <Spline
-              className="iphone"
-              scene="https://prod.spline.design/ddMWGaWGSLLGgFdz/scene.splinecode"
+            <IphoneViewer
             />
           </div>
         </div>
@@ -116,3 +116,8 @@ function MyPortfolio() {
 }
 
 export default MyPortfolio;
+
+// style={{
+//               //   height: window.innerWidth < 768 ? "300px" : "500px", // condition pour mobile
+//               //   width: window.innerWidth < 768 ? "100%" : "500px", // condition pour mobile
+//               // }}

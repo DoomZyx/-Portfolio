@@ -20,6 +20,17 @@
  }
 }
 
+// Petit ajustement des espaces pour les écrans de moins de 340px
+@media screen and (min-width:320px) and (max-width: 340px) {
+ .header-layout {
+  margin-top: 7em !important;
+  margin-bottom: 5.8em !important;
+ }
+ .thphr {
+  margin-bottom: 8em !important;
+ }
+}
+
 @include mobile {
  .header-layout {
   margin-top: 10em;
