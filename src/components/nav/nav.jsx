@@ -1,11 +1,18 @@
 import "./_nav.scss";
 import { HashLink } from "react-router-hash-link";
 import Me from "/public/me.png";
+import { useState } from "react";
 
 function Nav() {
+  const [isOpen, setIsOpen] = useState(false);
   return (
     <>
       <nav>
+        <div className="layout-burger">
+          <button className="burger-menu" onClick={() => setIsOpen(!isOpen)}>
+            ☰
+          </button>
+        </div>
         <div className="nav-layout">
           <div className="myProfile">
             <img className="pictureOfMyself" src={Me} alt="" />
@@ -13,7 +20,7 @@ function Nav() {
           </div>
           <div className="links">
             <HashLink smooth={true} to="/">
-            Acceuil
+              Acceuil
             </HashLink>
             <HashLink smooth={true} to="/#portfolio">
               Portfolio
@@ -27,6 +34,26 @@ function Nav() {
           </div>
           <HashLink smooth={true} to="/#contact">
             <div className="connectButton">
+              <button>Connectons-nous</button>
+            </div>
+          </HashLink>
+        </div>
+
+        <div className={`mobile-menu ${isOpen ? "open" : ""}`}>
+          <HashLink smooth={true} to="/">
+            Acceuil
+          </HashLink>
+          <HashLink smooth={true} to="/#portfolio">
+            Portfolio
+          </HashLink>
+          <HashLink smooth={true} to="/#services">
+            Services
+          </HashLink>
+          <HashLink smooth={true} to="/#about">
+            A propos
+          </HashLink>
+          <HashLink smooth={true} to="/#contact">
+            <div className="connectButton-menu">
               <button>Connectons-nous</button>
             </div>
           </HashLink>

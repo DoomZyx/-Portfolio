@@ -1,3 +1,5 @@
+@use "../../Utils/Responsive" as *;
+
 .aboutMeSec {
   width: 100%;
   display: flex;
@@ -18,4 +20,9 @@
     font-weight: 300;
     font-size: 1.2em;
   }
+}
+
+.aboutMeSec {
+  position: relative;;
+  top: 120em;
 }

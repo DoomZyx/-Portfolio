@@ -1,3 +1,5 @@
+@use "../../Utils/Responsive" as *;
+
 nav {
   margin: 1em;
   width: 50%;
@@ -68,3 +70,84 @@ nav {
     transition: background 0.3s ease;
   }
 }
+
+.mobile-menu {
+  display: none;
+}
+
+.burger-menu {
+  display: none;
+}
+
+@include mobile {
+.nav-layout  {
+  display: none;
+}
+nav {
+  border: none;
+  width: 100%;
+  margin: 0;
+  transform: translateX(0%);
+}
+.burger-menu {
+  display: flex;
+  font-size: 1.2rem;
+  color: #ffffff;
+  background: none;
+  border: none;
+  button:focus {
+    border: none;
+  }
+}
+.layout-burger {
+  width: 100%;
+  border-bottom: 1px solid #484646;
+  padding: 0.7rem;
+}
+.mobile-menu  {
+  position: fixed;
+  top: 0;
+  z-index: 9999;
+  right: 100%;
+  width: 50%;
+  height: 100vh;
+  background-color: #000000;
+  border-left: 1px solid #484646;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  transition: right 0.3s ease-in-out;
+  padding-top: 5em;
+}
+  .mobile-menu.open {
+    right: 0;
+  }
+  .mobile-menu a {
+    color: #ffffff;
+    font-size: 1em;
+    margin: 1em 0;
+    text-decoration: none;
+  }
+  .connectButton-menu {
+    width: 100%;
+    margin-top: 9em;
+    button {
+    background: none;
+    border: 1px solid #484646;
+    color: #ffffff;
+    padding: 1em 2em 1em 2em;
+    border-radius: 50px;
+    font-weight: 400;
+    font-size: 0.8em;
+    button:hover {
+      filter: invert(1);
+    }
+    }
+  }
+  .mobile-menu a:hover {
+    color: #ecbd00;
+    transition: color 0.3s ease;
+  }
+}
+

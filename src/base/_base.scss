@@ -3,21 +3,4 @@ body {
   color: #FFFFFF;
 }
 
-html, body {
-  overflow-x: hidden;
-  height: 100%;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  cursor: url("/public/cursor.png") 20 0, auto;
-}
-
-::-webkit-scrollbar, label {
-  cursor: url("/public//cursor.png"), 20 0 auto;
-}
-
-a:hover,
-button:hover{
-  cursor: url('/public/cursor.png') 20 0, auto
-}
 

@@ -6,6 +6,8 @@ import Homepage from "../src/pages/homepage";
 import Projects from "../src/components/Projects/projects";
 
 import ScrollToTop from "./hooks/ScrollToTop/scroll";
+import "./Custom/Scrollbar/_scrollbar.scss";
+import "./Custom/Cursor/_Cursor.scss";
 
 function App() {
   return (
