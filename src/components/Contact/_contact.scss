@@ -1,3 +1,5 @@
+@use "../../Utils//Responsive" as *;
+
 .layout-contact {
   display: flex;
   justify-content: center;
@@ -97,6 +99,10 @@ textarea::placeholder {
   border: 1px solid #484646;
   border-radius: 10px;
   padding: 1rem;
+  canvas {
+    width: 500px;
+    height: 500px;
+  }
 }
 
 /* Responsive */
@@ -108,5 +114,26 @@ textarea::placeholder {
 
   .row {
     flex-direction: column;
+  }
+}
+
+@include mobile {
+  .layout-contact {
+    margin-top: 3rem;
+  }
+  .contact-form {
+    width: 90%;
+  }
+  .submit-btn {
+    margin-top: 2em;
+  }
+
+  .porsche {
+    padding: 1.6rem;
+    width: 90%;
+    height: 250px;
+    canvas {
+      width:100% !important;
+    }
   }
 }

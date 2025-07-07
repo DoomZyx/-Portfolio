@@ -1,41 +1,26 @@
 /* eslint-disable react/no-unknown-property */
-import { Canvas, useFrame } from "@react-three/fiber";
-import { useGLTF } from "@react-three/drei";
-import { useRef, useEffect } from "react";
-import * as THREE from "three";
+import { Canvas } from "@react-three/fiber";
+import { useGLTF, OrbitControls } from "@react-three/drei";
 
 function Porsche({ path }) {
   const { scene } = useGLTF(path);
-  const pivot = useRef();
 
-  // Centrage automatique du modèle dans le groupe pivot
-  useEffect(() => {
-    const box = new THREE.Box3().setFromObject(scene);
-    const center = box.getCenter(new THREE.Vector3());
-    scene.position.sub(center); // Décale le modèle pour que son centre soit à l'origine
-  }, [scene]);
-
-  useFrame(() => {
-    if (pivot.current) {
-      pivot.current.rotation.y += 0.005;
-    }
-  });
-
-  return (
-    <group ref={pivot}>
-      <primitive object={scene} scale={40} />
-    </group>
-  );
+  return <primitive object={scene} scale={40} />;
 }
 
 export default function PorscheViewer() {
   return (
-    <Canvas
-      style={{ height: "500px", width: "500px" }}
-      camera={{ position: [0, 0, 3], fov: 45 }}
-    >
+    <Canvas camera={{ position: [0, 0, 3], fov: 45 }}>
       <ambientLight intensity={0.5} />
       <directionalLight position={[2, 2, 2]} />
+      <OrbitControls
+        target={[0, 0.3, 0]}
+        enableZoom={false} // désactive le zoom
+        enablePan={false} // désactive le drag latéral
+        rotateSpeed={1} // sensibilité rotation
+        maxPolarAngle={Math.PI / 1.8} // limite la rotation verticale
+        minPolarAngle={Math.PI / 3} // limite la rotation verticale
+      />
       <Porsche path="/models/2018_porsche_911_carrera_gts.glb" />
     </Canvas>
   );

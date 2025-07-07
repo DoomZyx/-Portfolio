@@ -30,11 +30,8 @@ function Shapeshifter({ path }) {
 
 export default function ShapeshifterViewer() {
   return (
-    <Canvas
-      style={{ height: "500px", width: "900px" }}
-      camera={{ position: [0, 0, 3], fov: 45 }}
-    >
-      <ambientLight intensity={0.5} />
+    <Canvas camera={{ position: [0, 0, 3], fov: 45 }}>
+      <ambientLight intensity={2} />
       <directionalLight position={[2, 2, 2]} />
       <Shapeshifter path="/models/holo_shapeshifter.glb" />
     </Canvas>

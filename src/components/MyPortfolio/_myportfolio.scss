@@ -189,6 +189,8 @@
 }
 
 .Iphone3d {
+  position: relative;
+  z-index: 2;
   min-width: 85%;
   max-width: 92%;
   width: 100%;

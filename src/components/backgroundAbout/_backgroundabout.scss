@@ -2,10 +2,10 @@
 
 .background {
   margin: 1em;
+  position: relative;
   display: flex;
   flex-direction: column;
-  z-index: -10;
-  overflow: visible;
+  z-index: -99999999;
   gap: 15px;
   img {
     border: 1px solid #484646;

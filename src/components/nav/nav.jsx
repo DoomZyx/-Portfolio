@@ -12,6 +12,9 @@ function Nav() {
           <button className="burger-menu" onClick={() => setIsOpen(!isOpen)}>
             ☰
           </button>
+          <div className="myProfile">
+            <img className="pictureOfMyself" src={Me} alt="" />
+          </div>
         </div>
         <div className="nav-layout">
           <div className="myProfile">
@@ -40,18 +43,23 @@ function Nav() {
         </div>
 
         <div className={`mobile-menu ${isOpen ? "open" : ""}`}>
-          <HashLink smooth={true} to="/">
-            Acceuil
-          </HashLink>
-          <HashLink smooth={true} to="/#portfolio">
-            Portfolio
-          </HashLink>
-          <HashLink smooth={true} to="/#services">
-            Services
-          </HashLink>
-          <HashLink smooth={true} to="/#about">
-            A propos
-          </HashLink>
+          <div className="burger-title">
+            <h2>PORTFOLIO</h2>
+          </div>
+          <div className="burger-links">
+            <HashLink smooth={true} to="/">
+              Acceuil
+            </HashLink>
+            <HashLink smooth={true} to="/#portfolio">
+              Portfolio
+            </HashLink>
+            <HashLink smooth={true} to="/#services">
+              Services
+            </HashLink>
+            <HashLink smooth={true} to="/#about">
+              A propos
+            </HashLink>
+          </div>
           <HashLink smooth={true} to="/#contact">
             <div className="connectButton-menu">
               <button>Connectons-nous</button>
