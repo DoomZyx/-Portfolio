@@ -52,29 +52,28 @@ function MyPortfolio() {
 
       <div className="container">
         <div className="containerThirst">
-          <div className="kasa">
-            <img src={kasaimg} alt="" />
-            <div className="info-project">
-              <h4>Kasa</h4>
-              <Link smooth={true} to={`/project/${kasa.id}`}>
+            <div className="kasa">
+          <Link smooth={true} to={`/project/${kasa.id}`}>
+              <img src={kasaimg} alt="" />
+              <div className="info-project">
+                <h4>Kasa</h4>
                 <FontAwesomeIcon icon={faArrowRight} />
-              </Link>
+              </div>
+          </Link>
             </div>
-          </div>
 
-          <div className="leMas">
-            <img src={LeMasimg} alt="" />
-            <div className="info-project">
-              <h4>Le Mas Du Paradis Bleu</h4>
-              <Link smooth={true} to={`/project/${leMas.id}`}>
+            <div className="leMas">
+          <Link smooth={true} to={`/project/${leMas.id}`}>
+              <img src={LeMasimg} alt="" />
+              <div className="info-project">
+                <h4>Le Mas Du Paradis Bleu</h4>
                 <FontAwesomeIcon icon={faArrowRight} />
-              </Link>
+              </div>
+          </Link>
             </div>
-          </div>
 
           <div className="Iphone3d" ref={containerRef}>
-            <IphoneViewer
-            />
+            <IphoneViewer />
           </div>
         </div>
 
@@ -96,15 +95,15 @@ function MyPortfolio() {
             </div>
           </div>
 
-          <div className="ohmyfood">
-            <img src={ohmyfoodimg} alt="" />
-            <div className="info-project">
-              <h4>Ohmyfood</h4>
-              <Link smooth={true} to={`/project/${ohmyfood.id}`}>
+            <div className="ohmyfood">
+          <Link smooth={true} to={`/project/${ohmyfood.id}`}>
+              <img src={ohmyfoodimg} alt="" />
+              <div className="info-project">
+                <h4>Ohmyfood</h4>
                 <FontAwesomeIcon icon={faArrowRight} />
-              </Link>
+              </div>
+          </Link>
             </div>
-          </div>
 
           <div className="myself">
             <img src={character} alt="" />

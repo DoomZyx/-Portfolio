@@ -62,3 +62,22 @@
   font-size: 1.3rem;
  }
 }
+
+@include tablet {
+  .header-layout {
+  margin-top: 10em;
+  margin-bottom: clamp(3em, calc(10em + 10vw), 10em);
+  flex-direction: column;
+  img {
+   width: 100%;
+   height: auto;
+  }
+ }
+ .thphr {
+  padding: 2em;
+  margin-bottom: 8em;
+  h1 {
+   font-size: 2.5em;
+  }
+ }
+}

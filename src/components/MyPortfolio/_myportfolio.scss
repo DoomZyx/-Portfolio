@@ -162,6 +162,9 @@
     flex-direction: column;
     padding: 0;
     margin: 0;
+    a:hover {
+      color: #ffffff
+    }
   }
 
   .containerThirst {
@@ -303,6 +306,170 @@ canvas {
   padding-inline: 1em;
   h4 {
     font-size: 0.69em;
+  }
+  svg {
+    display: none;
+  }
+}
+}
+
+@include tablet {
+   .title-portfolio {
+    margin-top: 5rem;
+    margin-bottom: 2rem;
+  }
+  .container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    a:hover {
+      color: #ffffff
+    }
+  }
+
+  .containerThirst {
+    width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+}
+
+.kasa,
+.leMas {
+  width: 45%;
+  min-height: 150px; /* hauteur minimum */
+  height: auto; 
+
+  img {
+    padding: 0.5em;
+    border-radius: 15px;
+    width: 95%;
+    height: auto; 
+  }
+}
+
+.Iphone3d {
+  position: relative;
+  z-index: 2;
+  min-width: 85%;
+  max-width: 92%;
+  width: 100%;
+  height: 350px;
+  -webkit-user-select: none; /* Safari iOS */
+  -moz-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+    transition: transform 0.2s ease-out;
+canvas {
+  width: auto;
+  height: 350px !important;
+}
+}
+
+.secondlayout {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin: 0 auto;
+  width: 100%;
+}
+.space {
+  max-width: 90%;
+  margin-top: 0.5rem;
+  height: 350px;
+  display: flex;
+  justify-content: center;
+
+  img {
+    border-radius: 20px;
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+  }
+}
+
+.layout-stack {
+  margin-top: 0em;
+  border: 1px solid #484646;
+  border-radius: 15px;
+  height: 200px;
+  width: 90%;
+
+  .thirstrangest {
+    width: 100%;
+    height: 100px;
+
+    :nth-child(1) {
+      border-top-left-radius: 15px;
+    }
+    :nth-child(3) {
+      border-top-right-radius: 15px;
+    }
+  }
+
+  .secondrangest {
+    width: 100%;
+    height: 100px;
+
+    :nth-child(1) {
+      border-bottom-left-radius: 15px;
+    }
+    :nth-child(3) {
+      border-bottom-right-radius: 15px;
+    }
+  }
+
+  img {
+    border: 1px solid #484646;
+    width: 33.04%;
+    height: 100px;
+    object-fit: contain;
+  }
+}
+
+
+.ohmyfood {
+  border: 1px solid #484646;
+  border-radius: 15px;
+  width: 90%;
+  height: auto;
+
+  img {
+    margin: 0.5em;
+    border-radius: 15px;
+    width: 97%;
+    height: auto;
+    object-fit: cover;
+  }
+}
+
+.myself {
+  border: 1px solid #484646;
+  border-radius: 15px;
+  width: 90%;
+  height: 350px;
+  text-align: center;
+  img {
+    width: 50%;
+    height: auto;
+  }
+}
+
+.info-project {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 1em;
+  h4 {
+    font-size: 1.2em;
   }
   svg {
     display: none;
