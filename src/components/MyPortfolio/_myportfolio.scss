@@ -1,3 +1,5 @@
+@use "../../Utils/Responsive" as *;
+
 .title-portfolio {
   color: #ecbd00;
   text-align: center;
@@ -147,5 +149,17 @@
   padding-inline: 1em;
   svg {
     font-size: 1.3em;
+  }
+}
+
+@include mobile {
+  .title-portfolio {
+    margin-top: 5rem;
+  }
+  .container {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    margin: 0;
   }
 }

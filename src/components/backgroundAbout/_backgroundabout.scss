@@ -1,3 +1,5 @@
+@use "../../Utils/Responsive" as *;
+
 .background {
   margin: 1em;
   display: flex;
@@ -64,4 +66,35 @@
 
 .img10 {
   opacity: 0.8;
+}
+
+@include mobile {
+  .background {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    z-index: -10;
+    overflow: visible;
+    gap: 15px;
+    img {
+      border: 1px solid #484646;
+      border-radius: 20px;
+      object-fit: cover;
+      width: 30%;
+      height: 200px;
+    }
+  }
+  .thirstrange {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  height: auto
+}
+
+.secondrange {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  height: auto;
+}
 }

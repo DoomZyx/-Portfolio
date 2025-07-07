@@ -1,3 +1,5 @@
+@use "../../../Utils/Responsive" as *;
+
 .catchphrase1 {
   display: flex;
   padding: 2em;
@@ -6,5 +8,18 @@
   h3 {
    font-size: 2.7em;
    font-weight: 500;
+  }
+}
+
+@include mobile {
+  .catchphrase1 {
+    margin-top: 2rem;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    line-height: 1.5;
+    h3 {
+      font-size: 1.3rem;
+    }
   }
 }
