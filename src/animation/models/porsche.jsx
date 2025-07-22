@@ -11,7 +11,7 @@ function Porsche({ path }) {
     dracoLoader.setDecoderConfig({ type: "wasm" });
     loader.setDRACOLoader(dracoLoader);
   });
-  return <primitive object={scene} scale={40} />;
+  return <primitive object={scene} scale={25} />;
 }
 
 export default function PorscheViewer() {

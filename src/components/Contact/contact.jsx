@@ -2,6 +2,8 @@ import { Suspense, lazy } from "react";
 const PorscheViewer = lazy(() => import("../../animation/models/porsche"));
 import { useForm, ValidationError } from "@formspree/react";
 import "./_contact.scss";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSpinner } from "@fortawesome/free-solid-svg-icons";
 
 function ContactMe() {
   const [state, handleSubmit] = useForm("mjkrdkog");
@@ -112,7 +114,22 @@ function ContactMe() {
         </div>
 
         <div className="porsche">
-          <Suspense fallback={<div>chargement...</div>}>
+          <Suspense
+            fallback={
+              <div
+                className="3d-loader"
+                style={{
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  width:"100%",
+                  height:"100%"
+                }}
+              >
+                <FontAwesomeIcon icon={faSpinner} spin/>
+              </div>
+            }
+          >
             <PorscheViewer />
           </Suspense>
         </div>

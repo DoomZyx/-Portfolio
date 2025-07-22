@@ -10,11 +10,20 @@ import "./Custom/Cursor/_Cursor.scss";
 import "./style.css";
 import "./base/_base.scss";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSpinner } from "@fortawesome/free-solid-svg-icons";
+
 function App() {
   return (
     <Router>
       <ScrollToTop />
-      <Suspense fallback={<div>Chargement...</div>}>
+      <Suspense
+        fallback={
+          <div className="loader">
+            <FontAwesomeIcon icon={faSpinner} spin />
+          </div>
+        }
+      >
         <Routes>
           <Route path="/" element={<Homepage />} />
           <Route path="/project/:id" element={<Projects />} />

@@ -6,7 +6,7 @@ import "./_myportfolio.scss";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
-
+import { faSpinner } from "@fortawesome/free-solid-svg-icons";
 
 import kasaimg from "/public/kasa.webp";
 import LeMasimg from "/public/LeMasDuParadis1.webp";
@@ -56,7 +56,13 @@ function MyPortfolio() {
           <div className="containerThirst">
             <div className="kasa">
               <Link smooth={true} to={`/project/${kasa.id}`}>
-                <img src={kasaimg} alt="Homepage du site Kasa" width={150} height={150} loading="lazy" />
+                <img
+                  src={kasaimg}
+                  alt="Homepage du site Kasa"
+                  width={150}
+                  height={150}
+                  loading="lazy"
+                />
                 <div className="info-project">
                   <h4>Kasa</h4>
                   <FontAwesomeIcon icon={faArrowRight} />
@@ -66,7 +72,13 @@ function MyPortfolio() {
 
             <div className="leMas">
               <Link smooth={true} to={`/project/${leMas.id}`}>
-                <img src={LeMasimg} alt="Homepage du site Le Mas Du Paradis Bleu" width={150} height={150} loading="lazy" />
+                <img
+                  src={LeMasimg}
+                  alt="Homepage du site Le Mas Du Paradis Bleu"
+                  width={150}
+                  height={150}
+                  loading="lazy"
+                />
                 <div className="info-project">
                   <h4>Le Mas Du Paradis Bleu</h4>
                   <FontAwesomeIcon icon={faArrowRight} />
@@ -75,33 +87,85 @@ function MyPortfolio() {
             </div>
 
             <div className="Iphone3d" ref={containerRef}>
-              <Suspense fallback={<div>Chargement...</div>}>
-              <IphoneViewer />
+              <Suspense
+                fallback={
+                  <div
+                    className="loader3D"
+                    style={{
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
+                      width: "100%",
+                      height: "100%",
+                    }}
+                  >
+                    <FontAwesomeIcon icon={faSpinner} spin />
+                  </div>
+                }
+              >
+                <IphoneViewer />
               </Suspense>
             </div>
           </div>
 
           <div className="secondlayout">
             <div className="space">
-              <img src={space} alt="Image de l'espace et ses étoiles" width={150} height={150} loading="lazy" />
+              <img
+                src={space}
+                alt="Image de l'espace et ses étoiles"
+                width={150}
+                height={150}
+                loading="lazy"
+              />
             </div>
 
             <div className="layout-stack">
               <div className="thirstrangest">
-                <img className="nodejs" src={node} alt="Logo Node.js" loading="lazy" />
+                <img
+                  className="nodejs"
+                  src={node}
+                  alt="Logo Node.js"
+                  loading="lazy"
+                />
                 <img className="sql" src={sql} alt="Logo SQL" loading="lazy" />
-                <img className="mongodb" src={mongodb} alt="Logo MongoDB" loading="lazy" />
+                <img
+                  className="mongodb"
+                  src={mongodb}
+                  alt="Logo MongoDB"
+                  loading="lazy"
+                />
               </div>
               <div className="secondrangest">
-                <img className="react" src={react} alt="Logo React" loading="lazy" />
-                <img className="sass" src={sass} alt="Logo SASS" loading="lazy" />
-                <img className="figma" src={figma} alt="Logo Figma" loading="lazy" />
+                <img
+                  className="react"
+                  src={react}
+                  alt="Logo React"
+                  loading="lazy"
+                />
+                <img
+                  className="sass"
+                  src={sass}
+                  alt="Logo SASS"
+                  loading="lazy"
+                />
+                <img
+                  className="figma"
+                  src={figma}
+                  alt="Logo Figma"
+                  loading="lazy"
+                />
               </div>
             </div>
 
             <div className="ohmyfood">
               <Link smooth={true} to={`/project/${ohmyfood.id}`}>
-                <img src={ohmyfoodimg} alt="Homepage de Ohmyfood" width={150} height={150} loading="lazy" />
+                <img
+                  src={ohmyfoodimg}
+                  alt="Homepage de Ohmyfood"
+                  width={150}
+                  height={150}
+                  loading="lazy"
+                />
                 <div className="info-project">
                   <h4>Ohmyfood</h4>
                   <FontAwesomeIcon icon={faArrowRight} />
@@ -110,7 +174,13 @@ function MyPortfolio() {
             </div>
 
             <div className="myself">
-              <img src={character} alt="Personnage habbo de moi-même" width={150} height={150} loading="lazy" />
+              <img
+                src={character}
+                alt="Personnage habbo de moi-même"
+                width={150}
+                height={150}
+                loading="lazy"
+              />
             </div>
           </div>
         </div>
