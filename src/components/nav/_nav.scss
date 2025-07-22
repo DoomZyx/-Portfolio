@@ -9,6 +9,10 @@ nav {
   transform: translateX(50%);
 }
 
+.layout-burger {
+  display: none;
+}
+
 .nav-layout,
 .myProfile,
 .links,
@@ -282,3 +286,14 @@ nav {
   }
 }
 
+@include desktop {
+ .layout-burger {
+  display: none;
+ }
+
+ nav {
+  width: 80%;
+  transform: translateX(12%);
+ }
+
+}

@@ -99,7 +99,8 @@
   }
 
   .box-services canvas {
-      min-width:300px;
+    transform:  translateX(1%);
+      max-width: 800px;
       width: 100%;
       min-height: 300px;
     }
@@ -128,5 +129,19 @@
         font-weight: 400;
       }
     }
+  }
+}
+
+@include desktop {
+  .services-container {
+    display: flex;
+    justify-content: center;
+  }
+  .box-services {
+    transform: translateX(0);
+    width: 70%;
+  }
+  .box-services canvas {
+    min-height: 200px;
   }
 }

@@ -7,20 +7,20 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
 
-import kasaimg from "/public/kasa.png";
-import LeMasimg from "/public/LeMasDuParadis1.png";
+import kasaimg from "/public/kasa.webp";
+import LeMasimg from "/public/LeMasDuParadis1.webp";
 import space from "/public/space.jpg";
 
-import node from "/public/stack/node.png";
-import sql from "/public/stack/sqlite.png";
-import mongodb from "/public/stack/mongodb.png";
-import react from "/public/stack/react.png";
-import sass from "/public/stack/sass.png";
-import figma from "/public/stack/figma.png";
+import node from "/public/stack/node.webp";
+import sql from "/public/stack/sqlite.webp";
+import mongodb from "/public/stack/mongodb.webp";
+import react from "/public/stack/react.webp";
+import sass from "/public/stack/sass.webp";
+import figma from "/public/stack/figma.webp";
 
-import ohmyfoodimg from "/public/ohmyfood1.png";
+import ohmyfoodimg from "/public/ohmyfood1.webp";
 
-import character from "/public/character.png";
+import character from "/public/character.webp";
 import IphoneViewer from "../../animation/models/iphone";
 
 function MyPortfolio() {
@@ -51,62 +51,64 @@ function MyPortfolio() {
       </h2>
 
       <div className="container">
-        <div className="containerThirst">
+        <div className="base-container">
+          <div className="containerThirst">
             <div className="kasa">
-          <Link smooth={true} to={`/project/${kasa.id}`}>
-              <img src={kasaimg} alt="" />
-              <div className="info-project">
-                <h4>Kasa</h4>
-                <FontAwesomeIcon icon={faArrowRight} />
-              </div>
-          </Link>
+              <Link smooth={true} to={`/project/${kasa.id}`}>
+                <img src={kasaimg} alt="Homepage du site Kasa" loading="lazy" />
+                <div className="info-project">
+                  <h4>Kasa</h4>
+                  <FontAwesomeIcon icon={faArrowRight} />
+                </div>
+              </Link>
             </div>
 
             <div className="leMas">
-          <Link smooth={true} to={`/project/${leMas.id}`}>
-              <img src={LeMasimg} alt="" />
-              <div className="info-project">
-                <h4>Le Mas Du Paradis Bleu</h4>
-                <FontAwesomeIcon icon={faArrowRight} />
+              <Link smooth={true} to={`/project/${leMas.id}`}>
+                <img src={LeMasimg} alt="Homepage du site Le Mas Du Paradis Bleu" loading="lazy" />
+                <div className="info-project">
+                  <h4>Le Mas Du Paradis Bleu</h4>
+                  <FontAwesomeIcon icon={faArrowRight} />
+                </div>
+              </Link>
+            </div>
+
+            <div className="Iphone3d" ref={containerRef}>
+              <IphoneViewer />
+            </div>
+          </div>
+
+          <div className="secondlayout">
+            <div className="space">
+              <img src={space} alt="Image de l'espace et ses étoiles" loading="lazy" />
+            </div>
+
+            <div className="layout-stack">
+              <div className="thirstrangest">
+                <img className="nodejs" src={node} alt="Logo Node.js" loading="lazy" />
+                <img className="sql" src={sql} alt="Logo SQL" loading="lazy" />
+                <img className="mongodb" src={mongodb} alt="Logo MongoDB" loading="lazy" />
               </div>
-          </Link>
+              <div className="secondrangest">
+                <img className="react" src={react} alt="Logo React" loading="lazy" />
+                <img className="sass" src={sass} alt="Logo SASS" loading="lazy" />
+                <img className="figma" src={figma} alt="Logo Figma" loading="lazy" />
+              </div>
             </div>
-
-          <div className="Iphone3d" ref={containerRef}>
-            <IphoneViewer />
-          </div>
-        </div>
-
-        <div className="secondlayout">
-          <div className="space">
-            <img src={space} alt="" />
-          </div>
-
-          <div className="layout-stack">
-            <div className="thirstrangest">
-              <img className="nodejs" src={node} alt="" />
-              <img className="sql" src={sql} alt="" />
-              <img className="mongodb" src={mongodb} alt="" />
-            </div>
-            <div className="secondrangest">
-              <img className="react" src={react} alt="" />
-              <img className="sass" src={sass} alt="" />
-              <img className="figma" src={figma} alt="" />
-            </div>
-          </div>
 
             <div className="ohmyfood">
-          <Link smooth={true} to={`/project/${ohmyfood.id}`}>
-              <img src={ohmyfoodimg} alt="" />
-              <div className="info-project">
-                <h4>Ohmyfood</h4>
-                <FontAwesomeIcon icon={faArrowRight} />
-              </div>
-          </Link>
+              <Link smooth={true} to={`/project/${ohmyfood.id}`}>
+                <img src={ohmyfoodimg} alt="Homepage de Ohmyfood" loading="lazy" />
+                <div className="info-project">
+                  <h4>Ohmyfood</h4>
+                  <FontAwesomeIcon icon={faArrowRight} />
+                </div>
+              </Link>
             </div>
 
-          <div className="myself">
-            <img src={character} alt="" />
+            <div className="myself">
+              <img src={character} alt="Personnage habbo de moi-même" loading="lazy" />
+            </div>
           </div>
         </div>
       </div>

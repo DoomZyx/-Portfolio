@@ -31,3 +31,12 @@
     }
   }
 }
+
+@include desktop {
+  .catchphrase1 {
+  display: flex;
+  padding: 2em;
+  margin-top: -20em;
+  margin-bottom: 5em;       
+ }
+}

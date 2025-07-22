@@ -1,6 +1,6 @@
 import "./_nav.scss";
 import { HashLink } from "react-router-hash-link";
-import Me from "/public/me.png";
+import Me from "/public/me.webp";
 import { useState } from "react";
 
 function Nav() {
@@ -13,12 +13,12 @@ function Nav() {
             ☰
           </button>
           <div className="myProfile">
-            <img className="pictureOfMyself" src={Me} alt="" />
+            <img className="pictureOfMyself" src={Me} alt="Axel Cella" loading="lazy" />
           </div>
         </div>
         <div className="nav-layout">
           <div className="myProfile">
-            <img className="pictureOfMyself" src={Me} alt="" />
+            <img className="pictureOfMyself" src={Me} alt="" loading="lazy" />
             <h4>Axel</h4>
           </div>
           <div className="links">

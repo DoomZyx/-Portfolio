@@ -16,6 +16,8 @@ function Projects() {
     return <div>Project not found</div>;
   }
 
+  const descriptionWithBreaks = project.description.fr.replace(/\n/g, "<br />");       //dangerouslySetInnerHTML permet de rendre br dans les descriptions comme un élément HTML
+
   return (
     <>
       <Nav />
@@ -27,10 +29,9 @@ function Projects() {
           <FontAwesomeIcon icon={faCheck} />
         ) : null}
       </div>
-
       <div className="project-layout">
         <div className="description">
-          <p>{project.description.fr}</p>
+          <p dangerouslySetInnerHTML={{ __html: descriptionWithBreaks }} /> 
         </div>
         <div className="carousel">
           <Carousel images={project.images} />
@@ -38,7 +39,7 @@ function Projects() {
       </div>
       <div className="stacks-layout">
         {project.technos.map((techno, index) => (
-          <img key={index} src={techno} alt={`Technology ${index}`} />
+          <img key={index} src={techno} alt={`Technology ${index}`} loading="lazy" />
         ))}
       </div>
     </>

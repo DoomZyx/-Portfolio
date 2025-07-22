@@ -61,3 +61,13 @@
   }
  }
 }
+
+@include desktop {
+  .layout-catchprase2 {
+    margin-bottom: -8rem;
+ img {
+  width: 50%;
+  height: 400px;
+ }
+}
+}

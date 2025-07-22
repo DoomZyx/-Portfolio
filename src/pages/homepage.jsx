@@ -7,6 +7,7 @@ import Catchphrase2 from "../components/CatchPhrase/Catchphrase2/catchPhrase2";
 import MyPortfolio from "../components/MyPortfolio/myPortfolio";
 import MyServices from "../components/Services/services";
 import ContactMe from "../components/Contact/contact";
+import Footer from "../components/footer/footer.jsx";
 
 function homepage() {
   return (
@@ -22,8 +23,9 @@ function homepage() {
         <MyServices />
         <ContactMe />
       </main>
+        <Footer />
     </>
   );
 }
 
-export default homepage();
+export default homepage;
