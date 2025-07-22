@@ -1,3 +1,4 @@
+import { Suspense, lazy } from "react";
 import { useRef, useEffect } from "react";
 import { HashLink as Link } from "react-router-hash-link";
 import projects from "../../data/projects";
@@ -21,7 +22,7 @@ import figma from "/public/stack/figma.webp";
 import ohmyfoodimg from "/public/ohmyfood1.webp";
 
 import character from "/public/character.webp";
-import IphoneViewer from "../../animation/models/iphone";
+const IphoneViewer = lazy(() => import("../../animation/models/iphone"));
 
 function MyPortfolio() {
   const containerRef = useRef(null);
@@ -55,7 +56,7 @@ function MyPortfolio() {
           <div className="containerThirst">
             <div className="kasa">
               <Link smooth={true} to={`/project/${kasa.id}`}>
-                <img src={kasaimg} alt="Homepage du site Kasa" loading="lazy" />
+                <img src={kasaimg} alt="Homepage du site Kasa" width={150} height={150} loading="lazy" />
                 <div className="info-project">
                   <h4>Kasa</h4>
                   <FontAwesomeIcon icon={faArrowRight} />
@@ -65,7 +66,7 @@ function MyPortfolio() {
 
             <div className="leMas">
               <Link smooth={true} to={`/project/${leMas.id}`}>
-                <img src={LeMasimg} alt="Homepage du site Le Mas Du Paradis Bleu" loading="lazy" />
+                <img src={LeMasimg} alt="Homepage du site Le Mas Du Paradis Bleu" width={150} height={150} loading="lazy" />
                 <div className="info-project">
                   <h4>Le Mas Du Paradis Bleu</h4>
                   <FontAwesomeIcon icon={faArrowRight} />
@@ -74,13 +75,15 @@ function MyPortfolio() {
             </div>
 
             <div className="Iphone3d" ref={containerRef}>
+              <Suspense fallback={<div>Chargement...</div>}>
               <IphoneViewer />
+              </Suspense>
             </div>
           </div>
 
           <div className="secondlayout">
             <div className="space">
-              <img src={space} alt="Image de l'espace et ses étoiles" loading="lazy" />
+              <img src={space} alt="Image de l'espace et ses étoiles" width={150} height={150} loading="lazy" />
             </div>
 
             <div className="layout-stack">
@@ -98,7 +101,7 @@ function MyPortfolio() {
 
             <div className="ohmyfood">
               <Link smooth={true} to={`/project/${ohmyfood.id}`}>
-                <img src={ohmyfoodimg} alt="Homepage de Ohmyfood" loading="lazy" />
+                <img src={ohmyfoodimg} alt="Homepage de Ohmyfood" width={150} height={150} loading="lazy" />
                 <div className="info-project">
                   <h4>Ohmyfood</h4>
                   <FontAwesomeIcon icon={faArrowRight} />
@@ -107,7 +110,7 @@ function MyPortfolio() {
             </div>
 
             <div className="myself">
-              <img src={character} alt="Personnage habbo de moi-même" loading="lazy" />
+              <img src={character} alt="Personnage habbo de moi-même" width={150} height={150} loading="lazy" />
             </div>
           </div>
         </div>

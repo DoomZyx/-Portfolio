@@ -15,6 +15,8 @@ function Footer() {
                 src={gmail}
                 alt="Logo Gmail"
                 loading="lazy"
+                width={50}
+                height={55}
               />
             </a>
             <a
@@ -27,6 +29,8 @@ function Footer() {
                 src={linkedin}
                 alt="Logo Linkedin"
                 loading="lazy"
+                width={55}
+                height={55}
               />
             </a>
             <a
@@ -39,6 +43,8 @@ function Footer() {
                 src={github}
                 alt="Logo Github"
                 loading="lazy"
+                width={55}
+                height={55}
               />
             </a>
           </div>

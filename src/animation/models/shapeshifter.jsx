@@ -1,11 +1,18 @@
 /* eslint-disable react/no-unknown-property */
 import { Canvas, useFrame } from "@react-three/fiber";
 import { useGLTF } from "@react-three/drei";
+import { DRACOLoader } from "three/examples/jsm/loaders/DRACOLoader";
 import { useRef, useEffect } from "react";
 import * as THREE from "three";
 
+useGLTF.preload("/models/holo_shapeshifter.glb");
+
 function Shapeshifter({ path }) {
-  const { scene } = useGLTF(path);
+  const { scene } = useGLTF(path, true, (loader) => {
+    const dracoLoader = new DRACOLoader();
+    dracoLoader.setDecoderPath("/draco/"); // chemin du dossier draco dans public
+    loader.setDRACOLoader(dracoLoader);
+  });
   const pivot = useRef();
 
   // Centrage automatique du modèle dans le groupe pivot

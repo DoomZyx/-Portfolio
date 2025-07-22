@@ -1,11 +1,19 @@
 /* eslint-disable react/no-unknown-property */
 import { Canvas } from "@react-three/fiber";
-import { useGLTF, OrbitControls } from "@react-three/drei";
+import { OrbitControls, useGLTF } from "@react-three/drei";
+import { DRACOLoader } from "three/examples/jsm/loaders/DRACOLoader";
+
+// Ajout du décodeur Draco
+useGLTF.preload("/models/2018_porsche_911_carrera_gts.glb");
 
 function Porsche({ path }) {
-  const { scene } = useGLTF(path);
+  const { scene } = useGLTF(path, true, (loader) => {
+    const dracoLoader = new DRACOLoader();
+    dracoLoader.setDecoderPath("/draco/"); // chemin du dossier draco dans public
+    loader.setDRACOLoader(dracoLoader);
+  });
 
-  return <primitive object={scene} scale={40} />;
+  return <primitive object={scene} scale={40} />; // Scale ajusté
 }
 
 export default function PorscheViewer() {
@@ -15,13 +23,14 @@ export default function PorscheViewer() {
       <directionalLight position={[2, 2, 2]} />
       <OrbitControls
         target={[0, 0.3, 0]}
-        enableZoom={false} // désactive le zoom
-        enablePan={false} // désactive le drag latéral
-        rotateSpeed={1} // sensibilité rotation
-        maxPolarAngle={Math.PI / 1.8} // limite la rotation verticale
-        minPolarAngle={Math.PI / 3} // limite la rotation verticale
+        enableZoom={false}
+        enablePan={false}
+        rotateSpeed={1}
+        maxPolarAngle={Math.PI / 1.8}
+        minPolarAngle={Math.PI / 3}
       />
       <Porsche path="/models/2018_porsche_911_carrera_gts.glb" />
     </Canvas>
   );
 }
+

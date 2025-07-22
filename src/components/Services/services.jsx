@@ -1,4 +1,5 @@
-import ShapeshifterViewer from "../../animation/models/shapeshifter";
+import { Suspense, lazy } from "react";
+const ShapeshifterViewer = lazy(() => import("../../animation/models/shapeshifter"))
 import "./_services.scss";
 
 function MyServices() {
@@ -9,7 +10,9 @@ function MyServices() {
       </h2>
       <div className="services-container">
         <div className="box-services">
+          <Suspense fallback={<div>Chargement...</div>}>
           <ShapeshifterViewer />
+          </Suspense>
           <div className="layout-services">
             <div className="services">
               <h4>Landing Page</h4>

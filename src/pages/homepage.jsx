@@ -1,13 +1,21 @@
-import Nav from "../components/nav/nav";
-import Header from "../components/header/header";
-import BackgroundABout from "../components/backgroundAbout/backgroundAbout";
-import AboutMe from "../components/AboutMe/aboutMe";
-import Catchphrase1 from "../components/CatchPhrase/Catchphrase1/catchPhrase1";
-import Catchphrase2 from "../components/CatchPhrase/Catchphrase2/catchPhrase2";
-import MyPortfolio from "../components/MyPortfolio/myPortfolio";
-import MyServices from "../components/Services/services";
-import ContactMe from "../components/Contact/contact";
-import Footer from "../components/footer/footer.jsx";
+import { lazy } from "react";
+
+const Nav = lazy(() => import("../components/nav/nav"));
+const Header = lazy(() => import("../components/header/header"));
+const AboutMe = lazy(() => import("../components/AboutMe/aboutMe"));
+const BackgroundABout = lazy(() =>
+  import("../components/backgroundAbout/backgroundAbout")
+);
+const Catchphrase1 = lazy(() =>
+  import("../components/CatchPhrase/Catchphrase1/catchPhrase1")
+);
+const Catchphrase2 = lazy(() =>
+  import("../components/CatchPhrase/Catchphrase2/catchPhrase2")
+);
+const MyPortfolio = lazy(() => import("../components/MyPortfolio/myPortfolio"));
+const MyServices = lazy(() => import("../components/Services/services"));
+const ContactMe = lazy(() => import("../components/Contact/contact"));
+const Footer = lazy(() => import("../components/footer/footer.jsx"));
 
 function homepage() {
   return (
@@ -23,7 +31,7 @@ function homepage() {
         <MyServices />
         <ContactMe />
       </main>
-        <Footer />
+      <Footer />
     </>
   );
 }

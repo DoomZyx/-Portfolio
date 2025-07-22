@@ -1,10 +1,19 @@
 import { Canvas } from "@react-three/fiber";
-import { OrbitControls, useGLTF } from "@react-three/drei";
+import { OrbitControls } from "@react-three/drei";
+import { DRACOLoader } from "three/examples/jsm/loaders/DRACOLoader";
+import { useLoader } from "@react-three/fiber";
+import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 
-function IphoneModel() {
-  const { scene } = useGLTF("/models/Iphone14.glb"); // ton fichier glb dans public/
-  return <primitive object={scene} scale={9} />;
-}
+const IphoneModel = () => {
+  const gltf = useLoader(GLTFLoader, "/models/Iphone14.glb", (loader) => {
+    const dracoLoader = new DRACOLoader();
+    dracoLoader.setDecoderPath("/draco/"); 
+    dracoLoader.setDecoderConfig({ type: "wasm" });
+    loader.setDRACOLoader(dracoLoader);
+  });
+
+  return <primitive object={gltf.scene} scale={10} />;
+};
 
 export default function IphoneViewer() {
   return (

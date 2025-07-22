@@ -6,7 +6,7 @@ function header() {
     <>
       <header>
         <div className="header-layout">
-          <img src={logoPortfolio} alt="Logo Portfolio Axel Cella" rel="preload"/>
+          <img src={logoPortfolio} alt="Logo Portfolio Axel Cella" width={400} height={400}/>
         </div>
         <div className="thphr">
           <h1>

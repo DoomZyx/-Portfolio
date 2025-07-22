@@ -16,18 +16,18 @@ function BackgroundABout() {
     <>
       <div className="background">
         <div className="thirstrange">
-          <img className="img1" src={image1} alt="PC Portable" loading="lazy" />
-          <img className="img2" src={image2} alt="Mobile" loading="lazy" />
-          <img className="img3" src={image3} alt="Clavier" loading="lazy" />
-          <img className="img4" src={image4} alt="PC Portable" loading="lazy" />
-          <img className="img5" src={image5} alt="PC sur le lit + vue" loading="lazy" />
-          <img className="img6" src={image6} alt="Office atmosphere" loading="lazy" />
+          <img className="img1" src={image1} alt="PC Portable" width={500} height={320} loading="lazy" />
+          <img className="img2" src={image2} alt="Mobile" width={500} height={320} loading="lazy" />
+          <img className="img3" src={image3} alt="Clavier" width={500} height={320} loading="lazy" />
+          <img className="img4" src={image4} alt="PC Portable" width={500} height={320} loading="lazy" />
+          <img className="img5" src={image5} alt="PC sur le lit + vue" width={500} height={320} loading="lazy" />
+          <img className="img6" src={image6} alt="Office atmosphere" width={500} height={320} loading="lazy" />
         </div>
         <div className="secondrange">
-          <img className="img7" src={image7} alt="PC portable sur un bureau" loading="lazy" />
-          <img className="img8" src={image8} alt="lightning office atmosphere" loading="lazy" />
-          <img className="img9" src={image9} alt="Trading" loading="lazy" />
-          <img className="img10" src={image10} alt="Code Javascript" loading="lazy" />
+          <img className="img7" src={image7} alt="PC portable sur un bureau" width={500} height={300} loading="lazy" />
+          <img className="img8" src={image8} alt="lightning office atmosphere" width={500} height={300} loading="lazy" />
+          <img className="img9" src={image9} alt="Trading" width={500} height={300} loading="lazy" />
+          <img className="img10" src={image10} alt="Code Javascript" width={500} height={300} loading="lazy" />
         </div>
       </div>
     </>

@@ -1,4 +1,5 @@
-import PorscheViewer from "../../animation/models/porsche";
+import { Suspense, lazy } from "react";
+const PorscheViewer = lazy(() => import("../../animation/models/porsche"));
 import { useForm, ValidationError } from "@formspree/react";
 import "./_contact.scss";
 
@@ -6,7 +7,14 @@ function ContactMe() {
   const [state, handleSubmit] = useForm("mjkrdkog");
   if (state.succeeded) {
     return (
-      <p style={{ textAlign: "center", fontSize: "1.2rem", marginTop: "7rem", marginBottom: "7rem" }}>
+      <p
+        style={{
+          textAlign: "center",
+          fontSize: "1.2rem",
+          marginTop: "7rem",
+          marginBottom: "7rem",
+        }}
+      >
         Votre demande est bien soumise ! <br /> Axel vous contactera bientôt
       </p>
     );
@@ -104,7 +112,9 @@ function ContactMe() {
         </div>
 
         <div className="porsche">
-          <PorscheViewer />
+          <Suspense fallback={<div>chargement...</div>}>
+            <PorscheViewer />
+          </Suspense>
         </div>
       </div>
     </>
