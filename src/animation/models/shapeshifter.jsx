@@ -2,7 +2,7 @@
 import { Canvas, useFrame } from "@react-three/fiber";
 import { useGLTF } from "@react-three/drei";
 import { DRACOLoader } from "three/examples/jsm/loaders/DRACOLoader";
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useState } from "react";
 import * as THREE from "three";
 
 useGLTF.preload("/models/holo_shapeshifter.glb");
@@ -36,11 +36,25 @@ function Shapeshifter({ path }) {
 }
 
 export default function ShapeshifterViewer() {
+  const [isVisible, setIsVisible] = useState(false);
+  const ref = useRef();
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(([entry]) => {
+      if (entry.isIntersecting) setIsVisible(true);
+    });
+    if (ref.current) observer.observe(ref.current);
+    return () => observer.disconnect();
+  }, []);
   return (
-    <Canvas camera={{ position: [0, 0, 3], fov: 45 }}>
-      <ambientLight intensity={2} />
-      <directionalLight position={[2, 2, 2]} />
-      <Shapeshifter path="/models/holo_shapeshifter.glb" />
-    </Canvas>
+    <div ref={ref}>
+      {isVisible && (
+        <Canvas camera={{ position: [0, 0, 3], fov: 45 }}>
+          <ambientLight intensity={2} />
+          <directionalLight position={[2, 2, 2]} />
+          <Shapeshifter path="/models/holo_shapeshifter.glb" />
+        </Canvas>
+      )}
+    </div>
   );
 }
