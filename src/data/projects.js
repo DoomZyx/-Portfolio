@@ -39,6 +39,7 @@ const projects = [
     },
     technos: [js, react, mongodb, node, sass],
     link: "https://github.com/DoomZyx/OhMyFood",
+    url: "https://oh-my-food-three.vercel.app/",
   },
 
   {
@@ -54,7 +55,7 @@ const projects = [
       en: "As part of my training, I developed a rental housing website for individuals using React. This project allowed me to face several technical challenges, including managing dynamic routing with React Router to display housing details based on their ID. I also worked on implementing a collapse system to show or hide additional information. These two aspects helped me better understand state management, props, and event handling in React. This project strengthened my front-end skills and improved my proficiency in React.",
     },
     technos: [js, react, sass],
-    link: "https://github.com/DoomZyx/Kasa",
+    link: "https://kasa-t72c-axels-projects-6d301c83.vercel.app/",
   },
   {
     id: 3,
@@ -70,6 +71,7 @@ const projects = [
     },
     technos: [sass, js, react, figma],
     link: "https://github.com/DoomZyx/Le-Mas-Du-Paradis",
+    url: "https://le-mas-du-paradis.vercel.app",
   },
 ];
 

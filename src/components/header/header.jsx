@@ -1,3 +1,4 @@
+import Typewriter from "../../hooks/Typewriter/Typewriter";
 import logoPortfolio from "../../../public/Portfolio.webp";
 import "./_header.scss";
 
@@ -6,13 +7,18 @@ function header() {
     <>
       <header>
         <div className="header-layout">
-          <img src={logoPortfolio} alt="Logo Portfolio Axel Cella" width={400} height={400}/>
+          <img
+            src={logoPortfolio}
+            alt="Logo Portfolio Axel Cella"
+            width={400}
+            height={400}
+          />
         </div>
         <div className="thphr">
-          <h1>
-            Tout problème a sa solution <br />
-            Chaque ligne de code y contribue
-          </h1>
+          <Typewriter
+            text={`Tout problème a sa solution \nChaque ligne de code y contribue`}
+            speed={50}
+          ></Typewriter>
         </div>
       </header>
     </>

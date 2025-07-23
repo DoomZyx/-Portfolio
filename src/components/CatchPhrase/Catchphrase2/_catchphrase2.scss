@@ -11,6 +11,10 @@
   width: 600px;
   height: 400px;
   object-fit: cover;
+  &:hover {
+   transform: scale(1.01);
+   transition: all 0.3s ease-in-out;
+  }
  }
  h4 {
   border: 1px solid #464848;
@@ -22,6 +26,10 @@
   height: 305px;
   margin: 0;
   padding: 2em;
+  &:hover {
+   transform: scale(1.01);
+   transition: all 0.3s ease-in-out;
+  }
  }
 }
 
