@@ -14,13 +14,13 @@ function header() {
             height={400}
           />
         </div>
+          </header>
         <div className="thphr">
           <Typewriter
             text={`Tout problème a sa solution \nChaque ligne de code y contribue`}
             speed={50}
           ></Typewriter>
         </div>
-      </header>
     </>
   );
 }

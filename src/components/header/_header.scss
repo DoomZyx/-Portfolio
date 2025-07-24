@@ -34,7 +34,7 @@
 @include mobile {
  .header-layout {
   margin-top: 10em;
-  margin-bottom: clamp(3em, calc(10em + 10vw), 10em);
+  margin-bottom: clamp(3em, calc(5em + 10vw), 15em);
   flex-direction: column;
   img {
    width: 100%;
@@ -51,7 +51,7 @@
 }
 @media screen and (min-width:390px) and (max-width: 420px) {
  .header-layout {
-  margin-bottom: 15rem !important;
+  margin-bottom: clamp(5rem, 10vw, 15rem) !important;
  }
 }
 @media screen and (min-width:420px) and (max-width: 500px) {

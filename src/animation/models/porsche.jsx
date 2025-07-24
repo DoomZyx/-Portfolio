@@ -11,7 +11,7 @@ function Porsche({ path }) {
     dracoLoader.setDecoderConfig({ type: "wasm" });
     loader.setDRACOLoader(dracoLoader);
   });
-  return <primitive object={scene} scale={25} />;
+  return <primitive object={scene} scale={45} />;
 }
 
 export default function PorscheViewer() {
@@ -26,15 +26,19 @@ export default function PorscheViewer() {
     return () => observer.disconnect();
   }, []);
 
+  useEffect(() => {
+    const resizemobile = navigator.userAgent
+  })
+
   return (
-    <div ref={ref} style={{ Height: "300px" }}>
+    <div ref={ref} style={{ Height: "100%" }}>
       {isVisible && (
         <Canvas camera={{ position: [0, 0, 3], fov: 45 }}>
-          <ambientLight intensity={0.5} />
+          <ambientLight intensity={2} />
           <directionalLight position={[2, 2, 2]} />
           <OrbitControls
             target={[0, 0.3, 0]}
-            enableZoom={false}
+            enableZoom={true}
             enablePan={false}
             rotateSpeed={1}
             maxPolarAngle={Math.PI / 1.8}

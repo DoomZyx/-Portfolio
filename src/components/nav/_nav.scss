@@ -103,6 +103,7 @@ nav {
   color: #ffffff;
   background: none;
   border: none;
+  transform: translateX(10%);
   button:focus {
     border: none;
   }
@@ -180,9 +181,9 @@ nav {
   }
 }
 
-@media screen and (max-width:390px) {
+@media screen and (max-width:390px) and (max-height: 400px) {
   .burger-menu {
-    transform: translateX(-19%);
+    transform: translateX(-10%);
   }
 }
 
