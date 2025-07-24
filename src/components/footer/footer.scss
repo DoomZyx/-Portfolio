@@ -37,10 +37,11 @@ footer {
 .copyright {
  font-size: 0.8rem;
 }
-
+.footer-links img {
+  transition: all 0.3s ease-in-out;
+}
 .footer-links img:hover {
  transform: scale(1.2);
- transition: all 0.3s ease-in-out;
 }
 
 @include mobile {

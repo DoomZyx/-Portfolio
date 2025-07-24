@@ -11,9 +11,9 @@
   width: 600px;
   height: 400px;
   object-fit: cover;
+  transition: all 0.3s ease-in-out;
   &:hover {
    transform: scale(1.01);
-   transition: all 0.3s ease-in-out;
   }
  }
  h4 {
@@ -26,9 +26,9 @@
   height: 305px;
   margin: 0;
   padding: 2em;
+  transition: all 0.3s ease-in-out;
   &:hover {
    transform: scale(1.01);
-   transition: all 0.3s ease-in-out;
   }
  }
 }

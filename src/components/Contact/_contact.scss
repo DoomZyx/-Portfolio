@@ -17,9 +17,9 @@
   max-width: 500px;
   color: #fff;
   border: 1px solid #484646;
+  transition: all 0.3s ease-in-out;
   &:hover {
     transform: scale(1.05);
-    transition: all 0.3s ease-in-out;
   }
 }
 
@@ -107,10 +107,6 @@ textarea::placeholder {
     width: 500px;
     height: 500px;
   }
-}
-.porsche:hover {
-  transform: scale(1.05);
-  transition: all 0.3s ease-in-out;
 }
 
 /* Responsive */

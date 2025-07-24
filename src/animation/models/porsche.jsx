@@ -27,7 +27,7 @@ export default function PorscheViewer() {
   }, []);
 
   return (
-    <div ref={ref} style={{ minHeight: "300px" }}>
+    <div ref={ref} style={{ Height: "300px" }}>
       {isVisible && (
         <Canvas camera={{ position: [0, 0, 3], fov: 45 }}>
           <ambientLight intensity={0.5} />

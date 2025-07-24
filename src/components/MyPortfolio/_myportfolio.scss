@@ -155,12 +155,19 @@
   }
 }
 
+.kasa img,
+.ohmyfood img,
+.leMas img,
+.layout-stack img {
+  transition: all 0.3s ease-in-out;
+
+}
+
 .kasa:hover img,
 .ohmyfood:hover img,
 .leMas:hover img,
 .layout-stack img:hover {
   transform: scale(1.01);
-  transition: all 0.3s ease-in-out;
 }
 
 @include mobile {
